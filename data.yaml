@@ -1,0 +1,9 @@
+path: C:/Users/user/Downloads/grocery_dataset
+
+train: Training/images
+val: Testing/images
+
+names:
+  0: Bottle
+  1: FresheCare_Matcha
+  2: Mie_Sedaap_Goreng
