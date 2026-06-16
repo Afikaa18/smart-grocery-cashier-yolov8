@@ -2,16 +2,12 @@
 
 An AI-powered Smart Cashier System that detects grocery items in real-time using a webcam and a custom-trained **YOLOv8** model. The system automatically updates a digital shopping cart, calculates the total price, and saves transaction records directly to **Google Sheets** upon checkout.
 
----
-
 ## Key Features
 *   **Real-time Object Detection:** Instantly identifies products in front of the camera using YOLOv8.
 *   **Auto Add to Cart:** Seamlessly adds items to the shopping cart with an anti-double scan protection mechanism (1-second delay).
 *   **Interactive POS Display:** Renders a digital checkout receipt interface directly onto the live camera stream using an OpenCV overlay.
 *   **Google Sheets Integration:** Automatically sends and appends final transaction details to a cloud spreadsheet.
 *   **Multi-Payment Support:** Handles distinct checkout sessions for both Cash (`CASH`) and QRIS (`QRIS`) payments.
-
----
 
 ## Model Training Pipeline
 
@@ -42,8 +38,6 @@ if __name__ == "__main__":
 
 *The execution of this script generates the optimized model weights saved as `best.pt`.*
 
----
-
 ## Core Cashier System (Detection)
 
 The primary application script `detect.py` handles the camera initialization, processes object detection frame-by-frame, displays the cashier user interface, and sends the finalized transaction payload.
@@ -60,8 +54,6 @@ The primary application script `detect.py` handles the camera initialization, pr
 *   Press **`C`** to finalize the transaction using **CASH** payment.
 *   Press **`P`** to finalize the transaction using **QRIS** payment.
 *   Press **`Q`** to **Quit** and close the application window.
-
----
 
 ## Google Spreadsheet Integration (Apps Script)
 
@@ -96,8 +88,6 @@ function doPost(e) {
 }
 ```
 
----
-
 ## Prerequisites & Installation
 
 Ensure you have the required external dependencies installed in your environment before executing the program:
@@ -105,8 +95,6 @@ Ensure you have the required external dependencies installed in your environment
 ```bash
 pip install ultralytics opencv-python requests
 ```
-
----
 
 ## How to Run
 
